@@ -1,23 +1,17 @@
 import java.util.Scanner;
 /**
- * Write a description of class Ejercicio5 here.
+ * Indicar si un número dado es primo o no
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Lida Heliana Arenas Mogollón
+ * @version 01/08/2017
  */
 public class Ejercicio5
 {
-    // instance variables - replace the example below with your own
-    private int N;
-    private Scanner entrada;
-    /**
-     * Constructor for objects of class ContarBits
-     */
-    public Ejercicio5()
+    public static void main(String args[])
     {
-        entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         System.out.print("Cuantas pruebas va a realizar ");
-        N = entrada.nextInt();
+        int N = entrada.nextInt();
         int nums[] = new int[N];
         System.out.println("ingrese los "+N+" números");
         for(int i = 0; i<N; i++){
