@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  * Contar la cantidad de bits en 1 que tiene la representación
- * binaria de un número.
+ * binaria de un número usando las operaciones bit a bit.
  * 
  * @author Lida Heliana Arenas Mogollón 
  * @version 01/08/2017
@@ -22,14 +22,14 @@ public class Ejercicio1
         
         for(int i = 0; i<T; i++){
             int tmp = nums[i];
-            int suma = 0;
-            while(tmp>0){
-                suma += (tmp%2);
-                tmp /= 2;
+            int cuenta = 0;
+            for(int j=0; j<32;j++){
+                cuenta = cuenta + (tmp & 1);
+                tmp = tmp >> 1;
             }
             System.out.printf(
             "%d tiene %d bits = 1 en su representación binaria\n",
-            nums[i], suma);
+            nums[i], cuenta);
         }
     }
 }
